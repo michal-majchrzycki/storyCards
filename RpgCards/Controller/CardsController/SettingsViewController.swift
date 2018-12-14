@@ -39,13 +39,14 @@ class SettingsViewController: BaseViewController, UITableViewDelegate, UITableVi
     //MARK: TableView Delegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsTableViewCell", for: indexPath) as! SettingsTableViewCell
         cell.detailsLabel.layer.borderWidth = 1
         cell.detailsLabel.layer.borderColor = UIColor.black.cgColor
+        cell.switchButton.isOn = FilterSettings.getDescription()
         
         if indexPath.row == 0 {
             cell.imageIcon.setIcon(from: .gameIcon, code: "game-icon-card-draw")
@@ -66,9 +67,14 @@ class SettingsViewController: BaseViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        pickedOption = indexPath.row
-        pickerView.reloadAllComponents()
-        pickerView.isHidden = false
+        if indexPath.row != 2 {
+            pickedOption = indexPath.row
+            pickerView.reloadAllComponents()
+            pickerView.isHidden = false
+        } else {
+            pickerView.isHidden = true
+        }
+
     }
     
     //MARK: PickerView Delegate
@@ -122,9 +128,21 @@ class SettingsViewController: BaseViewController, UITableViewDelegate, UITableVi
                 dice = "20"
             }
             FilterSettings.saveDices(number: dice)
+        case 2: break
         default: break
         }
         loadSettings()
         pickerView.isHidden = true
     }
+    
+    @IBAction func onSwitchAction(_ sender: UISwitch) {
+        if sender.isOn {
+            sender.setOn(false, animated: true)
+            FilterSettings.setDescription(isOn: false)
+        } else {
+            sender.setOn(true, animated: true)
+            FilterSettings.setDescription(isOn: true)
+        }
+    }
+    
 }

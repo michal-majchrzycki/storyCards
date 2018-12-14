@@ -318,8 +318,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTa-49-Ldy">
+                                                <switch hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bTa-49-Ldy">
                                                     <rect key="frame" x="258" y="29.5" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="onSwitchAction:" destination="jEB-92-EU5" eventType="valueChanged" id="gAJ-eQ-BDD"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>

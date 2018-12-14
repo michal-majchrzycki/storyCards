@@ -35,11 +35,12 @@ class CardsViewController: BaseViewController, UICollectionViewDataSource, UICol
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideCardsScaleView))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+        rollCards()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        rollCards()
+        
     }
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
