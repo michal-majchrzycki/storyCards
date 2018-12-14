@@ -7,12 +7,11 @@
 //
 
 import Foundation
-import SwiftIconFont
 
 public class CardsRoller {
     
-    static let gameIcons = SwiftIconFont.gameiconArr
-    static let rpgIcons = SwiftIconFont.rpgAwesomeArr
+    static let gameIcons = gameiconArr
+    static let rpgIcons = rpgAwesomeArr
     //let combinedDict = gameIcons.merging(rpgIcons) { $1 } a to dlatego, że rpgIcons czasami rzuca nilem
 
     public class func rollCardsX() -> String {

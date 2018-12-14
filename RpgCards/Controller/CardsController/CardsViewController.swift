@@ -7,10 +7,9 @@
 //
 
 import UIKit
-import SwiftIconFont
 
 class CardsViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-
+    
     @IBOutlet weak var cardsCollection: UICollectionView!
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var cardScaleView: UIView!
@@ -33,6 +32,9 @@ class CardsViewController: BaseViewController, UICollectionViewDataSource, UICol
         actionButton.layer.cornerRadius = 5
         actionButton.layer.borderWidth = 2
         cardsCollection.addSubview(self.refreshControl)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideCardsScaleView))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,7 +55,7 @@ class CardsViewController: BaseViewController, UICollectionViewDataSource, UICol
             self.cardsArray = RollerOptions.numberOfDices()
             cardsCollection.reloadData()
         }
-
+        
     }
     
     @IBAction func refreshCardsAction(_ sender: UIButton) {
@@ -81,6 +83,11 @@ class CardsViewController: BaseViewController, UICollectionViewDataSource, UICol
         })
     }
     
+    @objc private func hideCardsScaleView() {
+        cardScaleView.isHidden = true
+        cardScaleBack.isHidden = true
+    }
+    
     //MARK: CollectionView Delegate
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -102,9 +109,10 @@ class CardsViewController: BaseViewController, UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let code = self.cardsArray[indexPath.row] as? String {
-            showCardScaleView(icon: code)
+        if RollerOptions.cardsOrDices() {
+            if let code = self.cardsArray[indexPath.row] as? String {
+                showCardScaleView(icon: code)
+            }
         }
-        
     }
 }

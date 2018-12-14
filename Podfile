@@ -6,6 +6,6 @@ target 'RpgCards' do
   use_frameworks!
 
   # Pods for RpgCards
-  pod 'SwiftIconFont'
+  #pod 'SwiftIconFont'
 
 end

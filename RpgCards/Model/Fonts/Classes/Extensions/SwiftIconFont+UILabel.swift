@@ -10,7 +10,7 @@ import UIKit
 
 public extension UILabel {
     func parseIcon() {
-        let text = SwiftIconFont.replace(withText: (self.text! as NSString))
+        let text = replace(withText: (self.text! as NSString))
         self.attributedText = getAttributedString(text, ofSize: self.font!.pointSize)
     }
 }

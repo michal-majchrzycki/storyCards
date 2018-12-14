@@ -27,6 +27,21 @@
 		908D042520D269B0007B9832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 908D042420D269B0007B9832 /* Assets.xcassets */; };
 		908D042820D269B0007B9832 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 908D042620D269B0007B9832 /* LaunchScreen.storyboard */; };
 		908D043620D26DFA007B9832 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D043520D26DFA007B9832 /* CardsViewController.swift */; };
+		90C3D72F21C3E78A00652B64 /* GameIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3D72E21C3E78A00652B64 /* GameIcons.swift */; };
+		90C3D73121C3E78C00652B64 /* RpgAwesomeIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3D73021C3E78C00652B64 /* RpgAwesomeIcons.swift */; };
+		90C3D73421C3E7AC00652B64 /* FontLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3D73321C3E7AC00652B64 /* FontLoader.swift */; };
+		90C3D73621C3E7B200652B64 /* SwiftIconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3D73521C3E7B200652B64 /* SwiftIconFont.swift */; };
+		90C3D73D21C3E7F800652B64 /* rpg-awesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90C3D73B21C3E7F300652B64 /* rpg-awesome.ttf */; };
+		90C3D73E21C3E7F800652B64 /* game-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90C3D73C21C3E7F800652B64 /* game-icons.ttf */; };
+		90C3D74221C3E7FD00652B64 /* SwiftIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3D73F21C3E7FB00652B64 /* SwiftIconButton.swift */; };
+		90C3D74321C3E7FD00652B64 /* SwiftIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3D74021C3E7FB00652B64 /* SwiftIconLabel.swift */; };
+		90C3D74421C3E7FD00652B64 /* SwiftIconFontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3D74121C3E7FD00652B64 /* SwiftIconFontView.swift */; };
+		90C3D74B21C3E80600652B64 /* SwiftIconFont+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3D74521C3E80600652B64 /* SwiftIconFont+String.swift */; };
+		90C3D74C21C3E80600652B64 /* SwiftIconFont+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3D74621C3E80600652B64 /* SwiftIconFont+UIImageView.swift */; };
+		90C3D74D21C3E80600652B64 /* SwiftIconFont+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3D74721C3E80600652B64 /* SwiftIconFont+UIButton.swift */; };
+		90C3D74E21C3E80600652B64 /* SwiftIconFont+NSRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3D74821C3E80600652B64 /* SwiftIconFont+NSRange.swift */; };
+		90C3D74F21C3E80600652B64 /* SwiftIconFont+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3D74921C3E80600652B64 /* SwiftIconFont+UIImage.swift */; };
+		90C3D75021C3E80600652B64 /* SwiftIconFont+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3D74A21C3E80600652B64 /* SwiftIconFont+UILabel.swift */; };
 		90CB1C6D21C2947000FBF912 /* Dices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB1C6C21C2947000FBF912 /* Dices.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +68,21 @@
 		908D042720D269B0007B9832 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		908D042920D269B0007B9832 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		908D043520D26DFA007B9832 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		90C3D72E21C3E78A00652B64 /* GameIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameIcons.swift; sourceTree = "<group>"; };
+		90C3D73021C3E78C00652B64 /* RpgAwesomeIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RpgAwesomeIcons.swift; sourceTree = "<group>"; };
+		90C3D73321C3E7AC00652B64 /* FontLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontLoader.swift; sourceTree = "<group>"; };
+		90C3D73521C3E7B200652B64 /* SwiftIconFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftIconFont.swift; sourceTree = "<group>"; };
+		90C3D73B21C3E7F300652B64 /* rpg-awesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rpg-awesome.ttf"; sourceTree = "<group>"; };
+		90C3D73C21C3E7F800652B64 /* game-icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "game-icons.ttf"; sourceTree = "<group>"; };
+		90C3D73F21C3E7FB00652B64 /* SwiftIconButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftIconButton.swift; sourceTree = "<group>"; };
+		90C3D74021C3E7FB00652B64 /* SwiftIconLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftIconLabel.swift; sourceTree = "<group>"; };
+		90C3D74121C3E7FD00652B64 /* SwiftIconFontView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftIconFontView.swift; sourceTree = "<group>"; };
+		90C3D74521C3E80600652B64 /* SwiftIconFont+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftIconFont+String.swift"; sourceTree = "<group>"; };
+		90C3D74621C3E80600652B64 /* SwiftIconFont+UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftIconFont+UIImageView.swift"; sourceTree = "<group>"; };
+		90C3D74721C3E80600652B64 /* SwiftIconFont+UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftIconFont+UIButton.swift"; sourceTree = "<group>"; };
+		90C3D74821C3E80600652B64 /* SwiftIconFont+NSRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftIconFont+NSRange.swift"; sourceTree = "<group>"; };
+		90C3D74921C3E80600652B64 /* SwiftIconFont+UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftIconFont+UIImage.swift"; sourceTree = "<group>"; };
+		90C3D74A21C3E80600652B64 /* SwiftIconFont+UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftIconFont+UILabel.swift"; sourceTree = "<group>"; };
 		90CB1C6C21C2947000FBF912 /* Dices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dices.swift; sourceTree = "<group>"; };
 		C8079CCDE2D7DD21E7958C8A /* Pods-RpgCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RpgCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RpgCards/Pods-RpgCards.debug.xcconfig"; sourceTree = "<group>"; };
 		E2D39D5418D2C10F46CA0ABD /* Pods_RpgCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RpgCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +148,7 @@
 		9085D95F20D2854700EFF63B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				90C3D72D21C3E77E00652B64 /* Fonts */,
 				9085D96320D28A9200EFF63B /* CardsRoller.swift */,
 				9085D96520D294F100EFF63B /* RollerOptions.swift */,
 				9085D96720D2950100EFF63B /* FilterSettings.swift */,
@@ -181,6 +212,60 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		90C3D72D21C3E77E00652B64 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				90C3D73221C3E79E00652B64 /* Classes */,
+				90C3D73021C3E78C00652B64 /* RpgAwesomeIcons.swift */,
+				90C3D72E21C3E78A00652B64 /* GameIcons.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		90C3D73221C3E79E00652B64 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				90C3D73A21C3E7EA00652B64 /* Ressources */,
+				90C3D73921C3E7E400652B64 /* UI */,
+				90C3D73721C3E7B900652B64 /* Extensions */,
+				90C3D73321C3E7AC00652B64 /* FontLoader.swift */,
+				90C3D73521C3E7B200652B64 /* SwiftIconFont.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		90C3D73721C3E7B900652B64 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				90C3D74821C3E80600652B64 /* SwiftIconFont+NSRange.swift */,
+				90C3D74521C3E80600652B64 /* SwiftIconFont+String.swift */,
+				90C3D74721C3E80600652B64 /* SwiftIconFont+UIButton.swift */,
+				90C3D74921C3E80600652B64 /* SwiftIconFont+UIImage.swift */,
+				90C3D74621C3E80600652B64 /* SwiftIconFont+UIImageView.swift */,
+				90C3D74A21C3E80600652B64 /* SwiftIconFont+UILabel.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		90C3D73921C3E7E400652B64 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				90C3D73F21C3E7FB00652B64 /* SwiftIconButton.swift */,
+				90C3D74121C3E7FD00652B64 /* SwiftIconFontView.swift */,
+				90C3D74021C3E7FB00652B64 /* SwiftIconLabel.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		90C3D73A21C3E7EA00652B64 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				90C3D73C21C3E7F800652B64 /* game-icons.ttf */,
+				90C3D73B21C3E7F300652B64 /* rpg-awesome.ttf */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
 		DFA2B82E20B2D557C7A402CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,7 +285,6 @@
 				908D041620D269AE007B9832 /* Sources */,
 				908D041720D269AE007B9832 /* Frameworks */,
 				908D041820D269AE007B9832 /* Resources */,
-				B4369C92E4BD7B74CD634802 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,7 +334,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				908D042820D269B0007B9832 /* LaunchScreen.storyboard in Resources */,
+				90C3D73D21C3E7F800652B64 /* rpg-awesome.ttf in Resources */,
 				908D042520D269B0007B9832 /* Assets.xcassets in Resources */,
+				90C3D73E21C3E7F800652B64 /* game-icons.ttf in Resources */,
 				908D042320D269AF007B9832 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,24 +362,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B4369C92E4BD7B74CD634802 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RpgCards/Pods-RpgCards-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftIconFont/SwiftIconFont.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftIconFont.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RpgCards/Pods-RpgCards-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -301,10 +369,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90C3D74B21C3E80600652B64 /* SwiftIconFont+String.swift in Sources */,
 				90219DE520DD044600BF1106 /* Events.swift in Sources */,
+				90C3D75021C3E80600652B64 /* SwiftIconFont+UILabel.swift in Sources */,
+				90C3D74C21C3E80600652B64 /* SwiftIconFont+UIImageView.swift in Sources */,
+				90C3D73421C3E7AC00652B64 /* FontLoader.swift in Sources */,
+				90C3D74421C3E7FD00652B64 /* SwiftIconFontView.swift in Sources */,
 				90219DE720DD045A00BF1106 /* Races.swift in Sources */,
+				90C3D73121C3E78C00652B64 /* RpgAwesomeIcons.swift in Sources */,
 				9085D96220D2856200EFF63B /* CardCollectionViewCell.swift in Sources */,
 				908D043620D26DFA007B9832 /* CardsViewController.swift in Sources */,
+				90C3D72F21C3E78A00652B64 /* GameIcons.swift in Sources */,
 				9019EF8B20EE63740068F997 /* ThemeTypes.swift in Sources */,
 				9085D96820D2950100EFF63B /* FilterSettings.swift in Sources */,
 				9085D96420D28A9200EFF63B /* CardsRoller.swift in Sources */,
@@ -312,12 +387,18 @@
 				908D041E20D269AE007B9832 /* AppDelegate.swift in Sources */,
 				9085D96A20D2969E00EFF63B /* CardTypes.swift in Sources */,
 				9085D96620D294F100EFF63B /* RollerOptions.swift in Sources */,
+				90C3D74F21C3E80600652B64 /* SwiftIconFont+UIImage.swift in Sources */,
 				9085D95E20D2846500EFF63B /* BaseViewController.swift in Sources */,
 				9085D96E20D2A3A100EFF63B /* SettingsTableViewCell.swift in Sources */,
+				90C3D74221C3E7FD00652B64 /* SwiftIconButton.swift in Sources */,
 				90CB1C6D21C2947000FBF912 /* Dices.swift in Sources */,
 				9019EF9220EFB7470068F997 /* SessionsViewController.swift in Sources */,
 				9085D96C20D2A35E00EFF63B /* SettingsViewController.swift in Sources */,
+				90C3D74321C3E7FD00652B64 /* SwiftIconLabel.swift in Sources */,
+				90C3D74E21C3E80600652B64 /* SwiftIconFont+NSRange.swift in Sources */,
+				90C3D73621C3E7B200652B64 /* SwiftIconFont.swift in Sources */,
 				90219DE920DD046C00BF1106 /* Actions.swift in Sources */,
+				90C3D74D21C3E80600652B64 /* SwiftIconFont+UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6CAFE0DE1A7267FD6A6F18885EC69435"
+               BlueprintIdentifier = "9A70CB835A941AF3949F14445BA312D1"
                BuildableName = "Pods_RpgCards.framework"
                BlueprintName = "Pods-RpgCards"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6CAFE0DE1A7267FD6A6F18885EC69435"
+            BlueprintIdentifier = "9A70CB835A941AF3949F14445BA312D1"
             BuildableName = "Pods_RpgCards.framework"
             BlueprintName = "Pods-RpgCards"
             ReferencedContainer = "container:Pods.xcodeproj">
