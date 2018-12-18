@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CardsViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class CardsViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegate, SessionsViewDelegate, SettingsViewDelegate {
     
     @IBOutlet weak var cardsCollection: UICollectionView!
     @IBOutlet weak var actionButton: UIButton!
@@ -16,6 +16,7 @@ class CardsViewController: BaseViewController, UICollectionViewDataSource, UICol
     @IBOutlet weak var cardScaleLabel: UILabel!
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var cardScaleBack: UIView!
+    @IBOutlet weak var savedCardsIcon: UIBarButtonItem!
     
     var cardsArray: NSMutableArray = []
     var type = CardTypes.all
@@ -26,6 +27,7 @@ class CardsViewController: BaseViewController, UICollectionViewDataSource, UICol
         
         return refreshControl
     }()
+    var cardsSetName: String? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +40,13 @@ class CardsViewController: BaseViewController, UICollectionViewDataSource, UICol
         rollCards()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if CardsCache.get().count == 0 {
+            savedCardsIcon.isEnabled = false
+        } else {
+            savedCardsIcon.isEnabled = true
+        }
     }
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
@@ -49,18 +55,50 @@ class CardsViewController: BaseViewController, UICollectionViewDataSource, UICol
     }
     
     private func rollCards() {
-        if RollerOptions.cardsOrDices() {
-            self.cardsArray = RollerOptions.numberOfRolls()
-            cardsCollection.reloadData()
+        self.cardsArray = RollerOptions.numberOfRolls()
+        if CardsCache.get().count == 0 {
+            savedCardsIcon.isEnabled = false
         } else {
-            self.cardsArray = RollerOptions.numberOfDices()
-            cardsCollection.reloadData()
+            savedCardsIcon.isEnabled = true
         }
-        
+        cardsCollection.reloadData()
     }
     
     @IBAction func refreshCardsAction(_ sender: UIButton) {
         rollCards()
+    }
+    
+    @IBAction func onAddNewAction(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Name your deck", message: nil, preferredStyle: .alert)
+        
+        alert.addTextField { (textfield) in
+            textfield.placeholder = "Type name"
+        }
+        let action = UIAlertAction(title: "Save", style: .default) { (action) in
+            if let name = alert.textFields?.first?.text {
+                self.cardsSetName = name
+                self.saveCards()
+            }
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(action)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
+    }
+    @IBAction func onOpenSessionsLins(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "showSessionsList", sender: sender)
+    }
+    
+    @IBAction func onOpenSettingsViewController(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "showSettingsViewController", sender: sender)
+    }
+    
+    
+    @objc func saveCards() {
+        if let name = cardsSetName {
+            CardsCache.save(title: name, array: cardsArray as! [String])
+            savedCardsIcon.isEnabled = true
+        }
     }
     
     @objc private func showCardScaleView(icon: String) {
@@ -89,6 +127,18 @@ class CardsViewController: BaseViewController, UICollectionViewDataSource, UICol
         cardScaleBack.isHidden = true
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSessionsList" {
+            if let vc = segue.destination as? SessionsViewController {
+                vc.delegate = self
+            }
+        } else if segue.identifier == "showSettingsViewController" {
+            if let vc = segue.destination as? SettingsViewController {
+                vc.delegate = self
+            }
+        }
+    }
+    
     //MARK: CollectionView Delegate
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -115,5 +165,17 @@ class CardsViewController: BaseViewController, UICollectionViewDataSource, UICol
                 showCardScaleView(icon: code)
             }
         }
+    }
+    
+    //MARK: SessionsViewDelegate
+    
+    func set(cards: NSArray) {
+        cardsArray = NSMutableArray(array: cards)
+        cardsCollection.reloadData()
+    }
+    
+    //MARK: SettingsViewDelegate
+    func refreshSettings() {
+        rollCards()
     }
 }

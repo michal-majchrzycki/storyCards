@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SettingsViewDelegate {
+    func refreshSettings()
+}
+
 class SettingsViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var settingsTable: UITableView!
@@ -19,6 +23,7 @@ class SettingsViewController: BaseViewController, UITableViewDelegate, UITableVi
     var cardType = CardTypes.all
     var themeType = ThemeTypes.all
     var pickedOption = 0
+    var delegate: SettingsViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +76,7 @@ class SettingsViewController: BaseViewController, UITableViewDelegate, UITableVi
             pickedOption = indexPath.row
             pickerView.reloadAllComponents()
             pickerView.isHidden = false
+            delegate?.refreshSettings()
         } else {
             pickerView.isHidden = true
         }
@@ -132,6 +138,7 @@ class SettingsViewController: BaseViewController, UITableViewDelegate, UITableVi
         default: break
         }
         loadSettings()
+        delegate?.refreshSettings()
         pickerView.isHidden = true
     }
     
