@@ -256,9 +256,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EYD-vQ-y2j"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sessions List" id="pdZ-Kh-HYg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8DE-gN-dti"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Sessions List" id="pdZ-Kh-HYg"/>
                     <connections>
                         <outlet property="sessionsTableView" destination="2KP-ed-wQk" id="cBa-u1-DVr"/>
                     </connections>

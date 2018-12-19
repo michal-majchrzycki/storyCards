@@ -55,7 +55,12 @@ class CardsViewController: BaseViewController, UICollectionViewDataSource, UICol
     }
     
     private func rollCards() {
-        self.cardsArray = RollerOptions.numberOfRolls()
+        if RollerOptions.cardsOrDices() {
+            self.cardsArray = RollerOptions.numberOfRolls()
+        } else {
+            self.cardsArray = RollerOptions.numberOfDices()
+        }
+        
         if CardsCache.get().count == 0 {
             savedCardsIcon.isEnabled = false
         } else {
